@@ -21,7 +21,8 @@ before_install:
   - git config --global protocol.version 1
 
 install:
-  R -e 'install.packages("gh"); install.packages("Rcpp", repos="https://rcppcore.github.io/drat")''
+  - R -e 'install.packages("gh")'
+  - R -e 'install.packages("Rcpp", repos="https://rcppcore.github.io/drat")'
 
 script:
   - mkdir fakehome
